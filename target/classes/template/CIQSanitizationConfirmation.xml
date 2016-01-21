@@ -1,0 +1,74 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:CIQSanitizationConfirmation-0.1 CIQSanitizationConfirmation-0.1.XSD " xmlns="urn:Declaration:datamodel:standard:CN:CIQSanitizationConfirmation-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>CIQ0011</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration DataModelVersion="0.1" Xmlns="urn:Declaration:datamodel:standard:CN:CIQSanitizationConfirmation-0.1" Version="0.1">
+			<Apply>
+				<ApplyId>主键</ApplyId>
+				<VessalId>船舶主键</VessalId>
+				<ProcessBasis>处理依据</ProcessBasis>
+				<ProcessBasisOther>处理依据其他</ProcessBasisOther>
+				<ProcessObject>处理对象</ProcessObject>
+				<ProcessObjectOther>处理对象其他</ProcessObjectOther>
+				<ProcessPlace>处理地点</ProcessPlace>
+				<ReportNo>报检号</ReportNo>
+				<ReportName>报检人</ReportName>
+				<ReportTelephone>报检人联系电话</ReportTelephone>
+				<GoodsName>货物名称</GoodsName>
+				<Num>数（重）量</Num>
+				<Type>包装种类</Type>
+				<Teu40> 40尺teu数</Teu40>
+				<Teu20> 20尺teu数</Teu20>
+				<Teu45> 45尺teu数</Teu45>
+				<ContainerNo>箱号</ContainerNo>
+				<ImpOrExpNationOrArea>输出/入国（地区）</ImpOrExpNationOrArea>
+				<SavePlace>处理（存放）地点</SavePlace>
+				<ProcessScope>处理范围</ProcessScope>
+				<ProcessScopeMemo>处理范围备注</ProcessScopeMemo>
+				<ProcessScopeSelect>处理范围选择框</ProcessScopeSelect>
+				<SwillNum>泔水立方数</SwillNum>
+				<ProcessRegion>船舶处理区域</ProcessRegion>
+				<ProcessArea>船舶处理面积</ProcessArea>
+				<ContainerInsideOrOutside>集装箱里外</ContainerInsideOrOutside>
+				<ContainerTEUNum>集装箱TEU数</ContainerTEUNum>
+				<ProcessReason>处理原因选择框</ProcessReason>
+				<ProcessReason1>处理原因1 </ProcessReason1>
+				<ProcessReason2>处理原因2 </ProcessReason2>
+				<ProcessReason3>处理原因3 </ProcessReason3>
+				<ProcessWay>处理方式</ProcessWay>
+				<ProcessWayOther>处理方式其他</ProcessWayOther>
+				<SprayingType>施药种类</SprayingType>
+				<DrugsDensity>药物浓度</DrugsDensity>
+				<DealDateTime>密封（处理）时间</DealDateTime>
+				<Temperature>温度要求</Temperature>
+				<DealDepartCode>施检部门代码</DealDepartCode>
+				<DealDepartName>施检部门名称</DealDepartName>
+				<DealName>施检人员</DealName>
+				<Telephone>施检人员电话</Telephone>
+				<ProcessDateTime>施检时间</ProcessDateTime>
+				<OrderDateTime>通知单日期</OrderDateTime>
+				<OrderNo>联系单号</OrderNo>
+				<isSend>是否发送</isSend>
+				<isConfirm>船代是否确认</isConfirm>
+				<ConfirmDateTime>船代确认时间</ConfirmDateTime>
+				<ConfirmDepartId>船代确认卫生处理单位ID </ConfirmDepartId>
+				<ConfirmTime>卫生处理单位上报时间</ConfirmTime>
+				<IsDepartConfirm>卫生处理单位是否已经处理</IsDepartConfirm>
+				<IsReivew>国检是否评价</IsReivew>
+			</Apply>
+		</Declaration>
+	</MessageBody>
+</Message>

@@ -1,0 +1,85 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:MSAShipPreDepartureDeclaration-0.1 MSAShipPreDepartureDeclaration-0.1.XSD" xmlns="urn:Declaration:datamodel:standard:CN:MSAShipPreDepartureDeclaration-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>MSA0006</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration Xmlns="urn:Declaration:datamodel:standard:CN:MSAShipPreDepartureDeclaration-0.1" DataModelVersion="0.1" Version="0.1">
+			<Apply>
+				<ApplyId><![CDATA[${messageBody.bodyElement.decId!''}]]></ApplyId>
+				<ShipNo><![CDATA[${messageBody.bodyElement.basicInfo.shipNo!''}]]></ShipNo>
+				<IMO><![CDATA[${messageBody.bodyElement.basicInfo.imo!''}]]></IMO>
+				<NameEn><![CDATA[${messageBody.bodyElement.basicInfo.nameEn!''}]]></NameEn>
+				<NameCn><![CDATA[${messageBody.bodyElement.basicInfo.nameCn!''}]]></NameCn>
+				<NationalCn><![CDATA[${messageBody.bodyElement.basicInfo.nationalityCn!''}]]></NationalCn>
+				<SecLevelGrade><![CDATA[${messageBody.bodyElement.basicInfo.securityRank!''}]]></SecLevelGrade>
+				<VesselHostCN><![CDATA[${messageBody.bodyElement.basicInfo.ownerCn!''}]]></VesselHostCN>
+				<VesselHostEN><![CDATA[${messageBody.bodyElement.basicInfo.ownerEn!''}]]></VesselHostEN>
+				<CallNum><![CDATA[${messageBody.bodyElement.basicInfo.callName!''}]]></CallNum>
+				<VesselLength><![CDATA[${messageBody.bodyElement.basicInfo.totalLength!''}]]></VesselLength>
+				<VesselWide><![CDATA[${messageBody.bodyElement.basicInfo.totalLength!''}]]></VesselWide>
+				<VesselAllTone><![CDATA[${messageBody.bodyElement.basicInfo.totalTon!''}]]></VesselAllTone>
+				<VesselNetTone><![CDATA[${messageBody.bodyElement.basicInfo.netTon!''}]]></VesselNetTone>
+				<LoadingTone><![CDATA[${messageBody.bodyElement.basicInfo.capacityTon!''}]]></LoadingTone>
+				<SeqvVoyage><![CDATA[${messageBody.bodyElement.addInfo.sailings!''}]]></SeqvVoyage>
+				<StartPort><![CDATA[${messageBody.bodyElement.addInfo.departurePort!''}]]></StartPort>
+				<StartDate>${translateDate(messageBody.bodyElement.addInfo.dateDeparture!'','yyyy-MM-dd','yyyyMMdd')!''}</StartDate>
+				<PassPort><![CDATA[${messageBody.bodyElement.addInfo.passPort!''}]]></PassPort>
+				<ArrivalDate>${translateDate(messageBody.bodyElement.addInfo.dateArrival!'','yyyy-MM-dd','yyyyMMdd')!''}</ArrivalDate>
+				<BerthCode><![CDATA[${messageBody.bodyElement.addInfo.berthCode!''}]]></BerthCode>
+				<VesselType><![CDATA[${messageBody.bodyElement.addInfo.shipType!''}]]></VesselType>
+				<ProDraw><![CDATA[${messageBody.bodyElement.addInfo.frontDraft!''}]]></ProDraw>
+				<EndDraw><![CDATA[${messageBody.bodyElement.addInfo.backDraft!''}]]></EndDraw>
+				<VesselSpeed><![CDATA[${messageBody.bodyElement.addInfo.speed!''}]]></VesselSpeed>
+				<AwayDate>${translateDate(messageBody.bodyElement.addInfo.dateLeave!'','yyyy-MM-dd','yyyyMMdd')!''}</AwayDate>
+				<BoundPort><![CDATA[${messageBody.bodyElement.addInfo.destPort!''}]]></BoundPort>
+				<DeportMaxDraw><![CDATA[${messageBody.bodyElement.addInfo.expMaxDraft!''}]]></DeportMaxDraw>
+				<InpTravellerTotal><![CDATA[${messageBody.bodyElement.cargoInfo.impPsngCnt!''}]]></InpTravellerTotal>
+				<InpMaleChinaCrew><![CDATA[${messageBody.bodyElement.cargoInfo.impCnCrewMale!''}]]></InpMaleChinaCrew>
+				<InpFemaleChinaCrew><![CDATA[${messageBody.bodyElement.cargoInfo.impCnCrewFemale!''}]]></InpFemaleChinaCrew>
+				<InpMaleForeignCrew><![CDATA[${messageBody.bodyElement.cargoInfo.impForeignCrewMale!''}]]></InpMaleForeignCrew>
+				<InpFemaleForeignCrew><![CDATA[${messageBody.bodyElement.cargoInfo.impForeignCrewFemale!''}]]></InpFemaleForeignCrew>
+				<IMMeterialName><![CDATA[${messageBody.bodyElement.cargoInfo.impGoodsName!''}]]></IMMeterialName>
+				<ExMeterialName><![CDATA[${messageBody.bodyElement.cargoInfo.expCargoName!''}]]></ExMeterialName>
+				<InpMeterialNum><![CDATA[${messageBody.bodyElement.cargoInfo.impCargoTon!''}]]></InpMeterialNum>
+				<InpNormalMaterialNum><![CDATA[${messageBody.bodyElement.cargoInfo.impGeneralGoodsTon!''}]]></InpNormalMaterialNum>
+				<InpHazardouMaterialNum><![CDATA[${messageBody.bodyElement.cargoInfo.impDangerousCargoTon!''}]]></InpHazardouMaterialNum>
+				<ExpTravellerNum><![CDATA[${messageBody.bodyElement.cargoInfo.expPsngs!''}]]></ExpTravellerNum>
+				<ExpCnMaleCrew><![CDATA[${messageBody.bodyElement.cargoInfo.expCnCrewMale!''}]]></ExpCnMaleCrew>
+				<ExpCnFemaleCrew><![CDATA[${messageBody.bodyElement.cargoInfo.expCnCrewFemale!''}]]></ExpCnFemaleCrew>
+				<ExpMaleForeignCrew><![CDATA[${messageBody.bodyElement.cargoInfo.expForeignCrewMale!''}]]></ExpMaleForeignCrew>
+				<ExpFemaleForeignCrew><![CDATA[${messageBody.bodyElement.cargoInfo.expForeignCrewFemale!''}]]></ExpFemaleForeignCrew>
+				<ExportMeterialNum><![CDATA[${messageBody.bodyElement.cargoInfo.expCargoTon!''}]]></ExportMeterialNum>
+		    <ExportNormalMaterialNum><![CDATA[${messageBody.bodyElement.cargoInfo.expGeneralCargoTon!''}]]></ExportNormalMaterialNum>
+        <ExportHazardouMaterialNum><![CDATA[${messageBody.bodyElement.cargoInfo.expDangerousGoodsTon!''}]]></ExportHazardouMaterialNum>
+				<ApplyCompany><![CDATA[${messageBody.bodyElement.other.decCompany!''}]]></ApplyCompany>
+				<ApplyName><![CDATA[${messageBody.bodyElement.other.decPerson!''}]]></ApplyName>
+				<ReviceDepart><![CDATA[${messageBody.bodyElement.other.reportToDepartment!''}]]></ReviceDepart>
+				<Flag><![CDATA[${messageBody.bodyElement.other.ifInternational!''}]]></Flag>
+				<Memo><![CDATA[${messageBody.bodyElement.other.remarks!''}]]></Memo>
+			</Apply>
+			<AttachmentLists>
+				<#if ((messageBody.bodyElement.attachmentInfo??)&(messageBody.bodyElement.attachmentInfo?size gt 0))>
+				<#list messageBody.bodyElement.attachmentInfo as item>
+				<AttachmentInfo>
+					<AttachmentNo>${item_index+1}</AttachmentNo>
+					<AttachmentId><![CDATA[${item.trueFileName!''}]]></AttachmentId>
+					<AttachmentName><![CDATA[${item.fileName!''}]]></AttachmentName>
+					<Remark><![CDATA[${item.remark!''}]]></Remark>
+				</AttachmentInfo>
+				</#list>
+				</#if>
+			</AttachmentLists>		</Declaration>
+	</MessageBody>
+</Message>

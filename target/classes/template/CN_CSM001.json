@@ -1,0 +1,73 @@
+<#include "public.ftl">
+<#setting number_format="#">
+{
+  	"MessageHead": {
+    "MessageID": ${translateStr(messageHead.messageID!'')},
+    "FunctionCode": {
+      "Value": "2"
+    },
+    "MessageType": "CSM001",
+    "SenderID": ${translateStr(messageHead.senderID!'')},
+    "ReceiverID": "0000",
+    "SendTime": {
+      "Value": ${translateStr(messageHead.sendTime!'')}
+    },
+    "Version": {
+      "Value": 0
+    }
+  },
+  "MessageBody": {
+    "Declaration": {
+      "Archive": {
+        "VesselNameEn":${translateStr(messageBody.bodyElement.nameEn!'')},
+        "VesselNameCn":${translateStr(messageBody.bodyElement.nameCn!'')},
+        "IMO":${translateStr(messageBody.bodyElement.imo!'')},
+        "CallSign":${translateStr(messageBody.bodyElement.callName!'')},
+        "Nationality":${translateStr(messageBody.bodyElement.flagNationality!'')},
+        "CertificateNo":${translateStr(messageBody.bodyElement.shipIdentityId!'')},
+        "CertificateDate":${translateStr(translateDate(messageBody.bodyElement.dateShipIdentity!'','yyyy-MM-dd','yyyyMMdd')!'')},
+        "BuildDate":${translateStr(translateDate(messageBody.bodyElement.dateBuild!'','yyyy-MM-dd','yyyyMMdd')!'')},
+        "HailingPort":${translateStr(messageBody.bodyElement.nationalityPort!'')},
+        "VesselSort":${translateStr(messageBody.bodyElement.shipType!'')},
+        "LineType":${translateStr(messageBody.bodyElement.businessNature!'')},
+        "CommunicationID":${translateStr(messageBody.bodyElement.communicationId!'')},
+        "CommunicationType":${translateStr(messageBody.bodyElement.communication!'')},
+        "GrossTonnage":${translateNum(messageBody.bodyElement.totalTon!'')},
+        "NetTonnage":${translateNum(messageBody.bodyElement.netTon!'')},
+        "DeadWeightTonnage":${translateNum(messageBody.bodyElement.capacityTon!'')},
+        "VesselLength":${translateNum(messageBody.bodyElement.totalLength!'')},
+        "VesselBreadth":${translateNum(messageBody.bodyElement.width!'')},
+        "VesselDeapth":${translateNum(messageBody.bodyElement.height!'')},
+        "ControlType":${translateStr(messageBody.bodyElement.superviseType!'')},
+        "CoCode":${translateStr(messageBody.bodyElement.companyCode!'')},
+        "VesselCorpNameEn":${translateStr(messageBody.bodyElement.companyNameEn!'')},
+        "VesselCorpNameCn":${translateStr(messageBody.bodyElement.companyNameCn!'')},
+        "RecordDateTime":${translateStr(translateDate(messageBody.bodyElement.recordDate!'','yyyy-MM-dd','yyyyMMdd')!'')},
+        "ClassLetter":${translateStr(messageBody.bodyElement.rank!'')},
+        "ClassificationNo":${translateStr(messageBody.bodyElement.rankIdentityId!'')},
+        "VesselColor":${translateStr(messageBody.bodyElement.bodyColor!'')},
+        "FunnelColor":${translateStr(messageBody.bodyElement.chimneyColor!'')},
+        "Email":${translateStr(messageBody.bodyElement.email!'')},
+        "SatellitePhone":${translateStr(messageBody.bodyElement.satellitePhonenum!'')},
+        "HorsePower":${translateStr(messageBody.bodyElement.shipHorsepower!'')},
+        "Speed":${translateStr(messageBody.bodyElement.maxSpeed!'')},
+        "TPI_TPC":${translateStr(messageBody.bodyElement.tpiTpc!'')},
+        "DeepDraft":${translateStr(messageBody.bodyElement.draftDepth!'')},
+        "LightDraft":${translateStr(messageBody.bodyElement.emptyDraft!'')},
+        "CarbinWindowNum":${translateStr(messageBody.bodyElement.hatchCount!'')},
+        "CargoDear":${translateStr(messageBody.bodyElement.liftingEquipment!'')},
+        "BaleCapacity":${translateStr(messageBody.bodyElement.packageTankCapacity!'')},
+        "GrainCapacity":${translateStr(messageBody.bodyElement.bulkTankCapacity!'')},
+        "CeilingTEU":${translateStr(messageBody.bodyElement.cargoTeuCount!'')},
+        "DeckTEU":${translateStr(messageBody.bodyElement.boardateTeuCount!'')},
+        "CrewLimit":${translateStr(messageBody.bodyElement.staffLimit!'')},
+        "PassengerLimit":${translateStr(messageBody.bodyElement.passengerLimit!'')},
+        "Memo":${translateStr(messageBody.bodyElement.remark!'')},
+        "OWNER_CO":${translateStr(messageBody.bodyElement.ownerCO!'')}
+      },
+      "Xmlns": 19,
+      "DataModelVersion": 0,
+      "Version": 0
+    }
+  }
+}

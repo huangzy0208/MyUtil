@@ -1,0 +1,72 @@
+<#include "public.ftl">
+<#setting number_format="#">
+{
+	"MessageHead": {
+    "MessageID": ${translateStr(messageBody.bodyElement.detalInfo.decId+"_"+messageHead.messageID!'')},
+    "FunctionCode": {
+      "Value": 2
+    },
+    "MessageType": "CSM102",
+    "SenderID": ${translateStr(messageHead.senderID!'')},
+    "ReceiverID": "0000",
+    "SendTime": {
+      "Value": ${translateStr(messageHead.sendTime!'')}
+    },
+    "Version": {
+      "Value": 0
+    }
+  }, 
+  "MessageBody": {
+    "Declaration": {
+      "Material": {
+        "Header": {
+          "IMO": ${translateStr(messageBody.bodyElement.detalInfo.imo!'')},
+          "Voyage": ${translateStr(messageBody.bodyElement.detalInfo.sailings!'')},
+          "Customs_Code": ${translateStr(messageBody.bodyElement.detalInfo.portCode!'')},
+          "Pre_Input_No": ${translateStr(messageBody.bodyElement.detalInfo.decId!'')},
+          "Agent_Code": ${translateStr(messageBody.bodyElement.detalInfo.decPerson!'')},
+          "Supply_Flag": ${translateStr(messageBody.bodyElement.detalInfo.loadUnload!'')},
+          "Tran_Type": ${translateStr(messageBody.bodyElement.detalInfo.transportType!'')},
+          "Pop_No": ${translateStr(messageBody.bodyElement.detalInfo.ladingId!'')},
+          "Accept_Company": ${translateStr(messageBody.bodyElement.detalInfo.consigneeCompany!'')},
+          "Berth": ${translateStr(messageBody.bodyElement.detalInfo.berthCode!'')},
+          "Stay_Place": ${translateStr(messageBody.bodyElement.detalInfo.storageLocation!'')},
+          "Quantity": ${translateNum(messageBody.bodyElement.detalInfo.quantity!'')},
+          "Cubage": ${translateStr(messageBody.bodyElement.detalInfo.volume!'')},
+          "Pack_Type": ${translateStr(messageBody.bodyElement.detalInfo.packageType!'')},
+          "Gross_Weight": ${translateNum(messageBody.bodyElement.detalInfo.grossWeight!'')},
+          "Net_Weight": ${translateNum(messageBody.bodyElement.detalInfo.netWeight!'')},
+          "Manage_Company": ${translateStr(messageBody.bodyElement.detalInfo.company!'')},
+          "Bill_Num": ${translateNum(messageBody.bodyElement.detalInfo.attachDocPages!'')},
+          "Bill_Type": ${translateStr(messageBody.bodyElement.detalInfo.attachDocType!'')},
+          "Other": ${translateStr(messageBody.bodyElement.detalInfo.otherDocPages!'')}
+        },
+        "Item": <#if ((messageBody.bodyElement.itemList??)&(messageBody.bodyElement.itemList?size gt 0))>[
+							  	<#list messageBody.bodyElement.itemList as item>
+							    {
+							    	"SeqNo":${item_index+1},
+										"MaterielCode":${translateStr(item.supplyCode!'')},
+										"MaterielName":${translateStr(item.supplyName!'')},
+										"DeclareQty":${translateNum(item.decQuantity!'')},
+										"RealQty":${translateNum(item.realQuantity!'')},
+										"Unit":${translateStr(item.quantityUnit!'')},
+										"Price":${translateNum(item.price!'')},
+										"Total":${translateNum(item.totalPrice!'')},
+										"Curr":${translateStr(item.currencyUnit!'')},
+										"Weight":${translateNum(item.weight!'')},
+										"OriginCountry":${translateStr(item.country!'')},
+										"Memo":${translateStr(item.remark!'')}
+							    }<#if item_has_next>,</#if>
+    			</#list>
+    			]
+    <#else>
+    null
+    </#if>
+      },
+      "Xmlns": 27,
+      "DataModelVersion": 0,
+      "Version": 0
+    }
+  }
+
+}

@@ -1,0 +1,68 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:CIQShipEmergencyDeclaration-0.1 CIQShipEmergencyDeclaration-0.1.XSD" xmlns="urn:Declaration:datamodel:standard:CN:CIQShipEmergencyDeclaration-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>CIQ0007</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration DataModelVersion="0.1" Xmlns="urn:Declaration:datamodel:standard:CN:CIQShipEmergencyDeclaration-0.1" Version="0.1">
+			<Apply>
+				<ApplyId>申报号</ApplyId>
+				<ApplyName>申报人</ApplyName>
+<ApplyCompanyName>申报的船舶代理公司</ApplyCompanyName>
+				<ApplyDate>申报日期</ApplyDate>
+				<NameCn>中文船名</NameCn>
+				<NameEn>英文船名</NameEn>
+				<NationalCn>中文国籍</NationalCn>
+				<NationalEn>英文国籍</NationalEn>
+				<StartPort>开往港口中文名称</StartPort>
+				<ExportDate>出港时间</ExportDate>
+				<CnNationCrewNum>船员中籍</CnNationCrewNum>
+				<EnNationCrewNum>船员外籍</EnNationCrewNum>
+				<CnNationTravelerNum>旅客中籍</CnNationTravelerNum>
+				<EnNationTravelerNum>旅客外籍</EnNationTravelerNum>
+			</Apply>
+			<Hygiene>
+				<HappenDateTime>发生时间</HappenDateTime>
+				<HappenPlace>发生地点</HappenPlace>
+				<Type>事件类型</Type>
+				<Desc>情况描述</Desc>
+				<TakeSteps>船方采取的措施</TakeSteps>
+			</Hygiene>
+		<SymptomList>
+				<SeqID>序号</SeqID>
+				<Name>姓名</Name>
+				<Occupation>职业</Occupation>
+				<National>国籍</National>
+				<Symptom>主要症状</Symptom>
+				<Death>死亡情况</Death>
+			</SymptomList>
+			<BiologyList>
+				<SeqID>序号</SeqID>
+				<Type>种类</Type>
+				<Num>数量</Num>
+				<place>位置</place>
+				<Symptom>主要症状</Symptom>
+				<Death>死亡情况</Death>
+			</BiologyList>
+			<AnimalList>
+				<SeqID> SeqID </SeqID>
+				<Type>种类</Type>
+				<Num>数量</Num>
+				<Noculation>接种情况</Noculation>
+				<Symptom>主要症状</Symptom>
+				<Death>死亡情况</Death>
+			</AnimalList>
+		</Declaration>
+	</MessageBody>
+</Message>

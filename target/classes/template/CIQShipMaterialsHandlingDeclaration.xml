@@ -1,0 +1,59 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:CIQShipMaterialsHandlingDeclaration-0.1 CIQShipMaterialsHandlingDeclaration-0.1.XSD " xmlns="urn:Declaration:datamodel:standard:CN:CIQShipMaterialsHandlingDeclaration-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>CIQ0006</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration DataModelVersion="0.1" Xmlns="urn:Declaration:datamodel:standard:CN:CIQShipMaterialsHandlingDeclaration-0.1" Version="0.1">
+			<Material>
+				<Header>
+					<IMO>船舶IMO编号</IMO>
+					<Voyage>进境（港）航次</Voyage>
+					<Customs_Code>关区代码</Customs_Code>
+					<Pre_Input_No>预录入编号</Pre_Input_No>
+					<Agent_Code>申报人代码</Agent_Code>
+					<Supply_Flag>启卸/添加标志</Supply_Flag>
+					<Tran_Type>运输方式</Tran_Type>
+					<Pop_No>提运单号</Pop_No>
+					<Accept_Company>收货单位</Accept_Company>
+					<Berth>泊位代码</Berth>
+					<Stay_Place>存放位置</Stay_Place>
+					<Quantity>数量</Quantity>
+					<Cubage>体积</Cubage>
+					<Pack_Type>包装类型</Pack_Type>
+					<Gross_Weight>毛重</Gross_Weight>
+					<Net_Weight>净重</Net_Weight>
+					<Manage_Company>经营单位</Manage_Company>
+					<Bill_Num>随附单据页数</Bill_Num>
+					<Bill_Type>随附单据种类</Bill_Type>
+					<Other>其他单据页数</Other>
+				</Header>
+				<Item>
+					<SeqNo>物料序号</SeqNo>
+					<MaterielCode>物料代码</MaterielCode>
+					<MaterielName>物品名称</MaterielName>
+					<DeclareQty>申报数量</DeclareQty>
+					<RealQty>实际数量</RealQty>
+					<Unit>数量单位</Unit>
+					<Price>单价</Price>
+					<Total>总价</Total>
+					<Curr>币制代码</Curr>
+					<Weight>重量(公斤) </Weight>
+					<OriginCountry>原产国代码</OriginCountry>
+					<Memo>备注</Memo>
+				</Item>
+			</Material>
+		</Declaration>
+	</MessageBody>
+</Message>

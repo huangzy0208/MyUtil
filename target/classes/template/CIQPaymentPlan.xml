@@ -1,0 +1,33 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:CIQPaymentPlan-0.1  CIQPaymentPlan-0.1.XSD" xmlns="urn:Declaration:datamodel:standard:CN:CIQPaymentPlan-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>CIQ0016</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration Xmlns="urn:Declaration:datamodel:standard:CN:CIQPaymentPlan-0.1" DataModelVersion="0.1" Version="0.1">
+			<Confirm>
+				<Id>主键</Id>
+				<InportAgentCode>进口船代代码</InportAgentCode>
+				<AgentName>船代公司名称</AgentName>
+				<FillName>计划填报人</FillName>
+				<FillId>计划填报人id</FillId>
+				<FillTime>计划填报时间</FillTime>
+				<Cost>费用金额</Cost>
+				<Status>缴费计划状态</Status>
+				<ConfirmName>确认收费人</ConfirmName>
+				<ConfirmTime>确认收费时间</ConfirmTime>
+			</Confirm>
+		</Declaration>
+	</MessageBody>
+</Message>

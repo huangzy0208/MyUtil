@@ -1,0 +1,38 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:MSAShipShiftBerthDeclaration-0.1 MSAShipShiftBerthDeclaration-0.1.XSD" xmlns="urn:Declaration:datamodel:standard:CN:MSAShipShiftBerthDeclaration-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>MSA0005</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration DataModelVersion="0.1" Xmlns="urn:Declaration:datamodel:standard:CN:MSAShipShiftBerthDeclaration-0.1" Version="0.1">
+			<Apply>
+				<ApplyId><![CDATA[${messageBody.bodyElement.applyId!''}]]></ApplyId>
+				<IMO><![CDATA[${messageBody.bodyElement.imo!''}]]></IMO>
+				<NameEn><![CDATA[${messageBody.bodyElement.nameEn}]]></NameEn>
+				<InboundVoyage><![CDATA[${messageBody.bodyElement.impSailings!''}]]></InboundVoyage>
+				<OutboundVoyage><![CDATA[${messageBody.bodyElement.expSailings!''}]]></OutboundVoyage>
+				<StartPortCode><![CDATA[${messageBody.bodyElement.departurePort!''}]]></StartPortCode>
+				<ArrivalPortCode><![CDATA[${messageBody.bodyElement.arrivalPort!''}]]></ArrivalPortCode>
+				<ArrivalDateTime>${translateDate(messageBody.bodyElement.dateArrival!'','yyyy-MM-dd','yyyyMMdd')!''}</ArrivalDateTime>
+				<MoveBetchDate>${translateDate(messageBody.bodyElement.dateShift!'','yyyy-MM-dd','yyyyMMdd')!''}</MoveBetchDate>
+				<BerthCode><![CDATA[${messageBody.bodyElement.currentBerthCode!''}]]></BerthCode>
+				<NewBerthCode><![CDATA[${messageBody.bodyElement.moveToBerthCode!''}]]></NewBerthCode>
+				<ApplyCode><![CDATA[${messageBody.bodyElement.decPerson!''}]]></ApplyCode>
+				<ApplyName><![CDATA[${messageBody.bodyElement.applicantName!''}]]></ApplyName>
+				<ApplyDate>${translateDate(messageBody.bodyElement.dateDec!'','yyyy-MM-dd','yyyyMMdd')!''}</ApplyDate>
+				<Memo><![CDATA[${messageBody.bodyElement.remarks!''}]]></Memo>
+			</Apply>
+		</Declaration>
+	</MessageBody>
+</Message>

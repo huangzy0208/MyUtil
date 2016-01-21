@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (sadfsdf) 使用XMLSpy vTeaMsdfdfdf DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by wn (wn) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:Declaration:datamodel:standard:CN:MSAPortDictionary-0.1" targetNamespace="urn:Declaration:datamodel:standard:CN:MSAPortDictionary-0.1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Type/ConveyanceDataType.xsd"/>
+	<xs:include schemaLocation="Type/DeclarationTypeCode.xsd"/>
+	<xs:include schemaLocation="Type/MessageDefine.xsd"/>
+	<xs:include schemaLocation="Type/MessageHead.xsd"/>
+	<xs:element name="Message">
+		<xs:annotation>
+			<xs:documentation>original message,报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MessageHead" type="Head"/>
+				<xs:element name="MessageBody">
+					<xs:annotation>
+						<xs:documentation>报文体</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Declaration">
+								<xs:annotation>
+									<xs:documentation>海事港口字典项（MSAPortDictionary-0.1）</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PortLists">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PortList" type="Port" minOccurs="1" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Xmlns" type="Xmlns" use="required" fixed="urn:Declaration:datamodel:standard:CN:MSAPortDictionary-0.1">
+										<xs:annotation>
+											<xs:documentation>报文体命名空间</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="DataModelVersion" type="DataModelVersion" use="required" fixed="0.1">
+										<xs:annotation>
+											<xs:documentation>报文体数据元模型版本号</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="Version" type="Version" use="required" fixed="0.1">
+										<xs:annotation>
+											<xs:documentation>报文体版本号</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Port">
+		<xs:sequence>
+			<!--港口代码    GKDM CHAR(6)-->
+			<xs:element name="PortsCode" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="6"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!--港口名称    GKMC    VARCHAR(40) -->
+			<xs:element name="PortsName" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="40"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!--英文港口名称    YWGKMC  VARCHAR(80)-->
+			<xs:element name="EnglishPortName" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="80"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!--港口类型   GKLX  CHAR(1) -->
+			<xs:element name="PortType" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!--有效标志   YXBZ  CHAR(1) -->
+			<xs:element name="AvailableMarker" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!--更新标志 GXBZ    CHAR(1) -->
+			<xs:element name="UpdateMark" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<!--更新时间  MRUT    DATE -->
+			<xs:element name="UpdateTime" type="yyyyMMddHHmmss" minOccurs="1" maxOccurs="1"/>
+			<!--信息来源 XXLY    CHAR(7) -->
+			<xs:element name="InformationSource" minOccurs="1" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

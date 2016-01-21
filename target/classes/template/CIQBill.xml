@@ -1,0 +1,67 @@
+<#setting number_format="#">
+<#include "public.ftl">
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xsi:schemaLocation="urn:Declaration:datamodel:standard:CN:CIQBill-0.1 CIQBill-0.1.XSD " xmlns="urn:Declaration:datamodel:standard:CN:CIQBill-0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<MessageHead>
+		<MessageID>${messageHead.messageID!''}</MessageID>
+		<MessageType>CIQ0013</MessageType>
+		<MessageMark>0</MessageMark>
+		<SenderID>${messageHead.senderID!''}</SenderID>
+		<ReceiverID>${messageHead.receiverID!''}</ReceiverID>
+		<ActualSenderID>${messageHead.actualSenderID!''}</ActualSenderID>
+		<ActualReceiverID>${messageHead.actualReceiverID!''}</ActualReceiverID>
+		<SendTime>${messageHead.sendTime!''}</SendTime>
+		<Version>${messageHead.version!''}</Version>
+		<SendNum>1</SendNum>
+	</MessageHead>
+	<MessageBody>
+		<Declaration DataModelVersion="0.1" Xmlns="urn:Declaration:datamodel:standard:CN:CIQBill-0.1" Version="0.1">
+			<Apply>
+				<Id>主键</Id>
+				<VesselId>船舶主键</VesselId>
+				<ApplyId>申报号</ApplyId>
+				<NameCn>中文船名</NameCn>
+				<NameEn>英文船名</NameEn>
+				<InboundVoyage>进口航次</InboundVoyage>
+				<OutboundVoyage>出口航次</OutboundVoyage>
+				<VesselCorpNameCn>船代公司名称</VesselCorpNameCn>
+				<VesselAllTone>总吨位</VesselAllTone>
+				<BeforePort>上一港中文名称</BeforePort>
+				<NextPort>下一港中文名称</NextPort>
+				<EnterPort>入港时间</EnterPort>
+				<OutPort>出港时间</OutPort>
+				<VesselType>船舶类型</VesselType>
+				<InportVesselCode>进口船代代码</InportVesselCode>
+				<BillingAmount>国检计费金额</BillingAmount>
+				<ShipImportIspectCost>船舶入境检疫费用</ShipImportIspectCost>
+				<ShipExportIspectCost>船舶出境检疫费用</ShipExportIspectCost>
+				<Import20EmptyNum>进口20尺空箱数</Import20EmptyNum>
+				<Import40EmptyNum>进口40尺空箱数</Import40EmptyNum>
+				<Import20FullNum>进口20尺重箱数</Import20FullNum>
+				<Import40FullNum>进口40尺重箱数</Import40FullNum>
+				<Export20EmptyNum>出口20尺空箱数</Export20EmptyNum>
+				<Export40EmptyNum>出口40尺空箱数</Export40EmptyNum>
+				<Export20FullNum>出口20尺重箱数</Export20FullNum>
+				<Export40FullNum>出口40尺重箱数</Export40FullNum>
+				<Charging>国检计费人</Charging>
+				<BillingDate>国检计费时间</BillingDate>
+				<BillingStatus>国检计费状态</BillingStatus>
+				<BillingMemo>国检备注</BillingMemo>
+				<ConfirmationId>船代确认人ID </ConfirmationId>
+				<ConfirmationName>船代确认人</ConfirmationName>
+				<ConfirmationDate>船代确认时间</ConfirmationDate>
+				<RebillingTime>重新计费时间</RebillingTime>
+				<AgentObjection>船代异议</AgentObjection>
+				<IsConfirmTally>船代是否确认理货</IsConfirmTally>
+				<TallyId>理货主键</TallyId>
+				<IsAddContainer>船代是否添加分箱单</IsAddContainer>
+				<AddContainerName>船代添加分箱表人</AddContainerName>
+				<AddContainerTime>船代添加分箱表时间</AddContainerTime>
+				<IsUpReportContainer>船代是否上报分箱表</IsUpReportContainer>
+				<PayId>计划缴费主键id </PayId>
+				<IsPay >是否交费</IsPay>
+				<IsInvoicing>是否开发票</IsInvoicing>
+			</Apply>
+		</Declaration>
+	</MessageBody>
+</Message>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="DeclarationTypeCode">
+		<xs:annotation>
+			<xs:documentation>报文类型代码</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MSA0001">
+				<xs:annotation>
+					<xs:documentation>海事船舶备案申报(MSAShipFilingDeclaration-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0002">
+				<xs:annotation>
+					<xs:documentation>海事船舶备案申报审核结果(MSAShipFilingDeclarationAuditResult-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0003">
+				<xs:annotation>
+					<xs:documentation>海事船舶进口岸预报(MSAShipPreArrivalDeclaration-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0004">
+				<xs:annotation>
+					<xs:documentation>海事船舶进口岸确报(MSAShipPreArrivalDeclarationConfirmation-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0005">
+				<xs:annotation>
+					<xs:documentation>海事船舶移泊申报(MSAShipShiftBerthDeclaration-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0006">
+				<xs:annotation>
+					<xs:documentation>海事船舶出口岸预报(MSAShipPreDepartureDeclaration-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DEFAULT_RESPONSE">
+				<xs:annotation>
+					<xs:documentation>默认回执(DefaultResponse-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AUDIT_RESULT">
+				<xs:annotation>
+					<xs:documentation>申报审核结果(AuditResult-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SHIP_RELEASE">
+				<xs:annotation>
+					<xs:documentation>船舶放行信息(ShipReleaseInformation-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0007">
+				<xs:annotation>
+					<xs:documentation>海事船舶备案查询(MSAShipFilingDeclarationInquiry-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0008">
+				<xs:annotation>
+					<xs:documentation>海事申报查询(MSADeclarationInquiry-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0009">
+				<xs:annotation>
+					<xs:documentation>海事船舶放行信息查询(MSAShipReleaseInquiry-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0010">
+				<xs:annotation>
+					<xs:documentation>海事单位注册备案(MSAEnterpriseRegistrationRecord-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0011">
+				<xs:annotation>
+					<xs:documentation>海事人员注册备案(MSAPersonnelRegistrationRecord-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0012">
+				<xs:annotation>
+					<xs:documentation>海事船舶种类字典项(MSAShipTypesDictionary-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0013">
+				<xs:annotation>
+					<xs:documentation>海事船舶国籍字典项(MSAPortDictionary-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0014">
+				<xs:annotation>
+					<xs:documentation>海事港口字典项(MSAShipNationalityDictionary-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0015">
+				<xs:annotation>
+					<xs:documentation>海事机构字典项(MSAOrganisationDictionary-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0016">
+				<xs:annotation>
+					<xs:documentation>海事泊位字典项(MSABerthDictionary-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0017">
+				<xs:annotation>
+					<xs:documentation>海事备案数据同步请求(MSAFilingSyncRequest-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0018">
+				<xs:annotation>
+					<xs:documentation>海事字典数据同步请求(MSADictSyncRequest-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0019">
+				<xs:annotation>
+					<xs:documentation>单位注册备案给海事(EnterpriseRegistrationToMSA-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0020">
+				<xs:annotation>
+					<xs:documentation>人员注册备案给海事(PersonnelRegistrationToMSA-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0022">
+				<xs:annotation>
+					<xs:documentation>海事船舶进口岸查验申报(MSAShipArrivalInspectionDeclaration-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MSA0023">
+				<xs:annotation>
+					<xs:documentation>海事船舶出口岸查验申报(MSAShipDepartureInspectionDeclaration-0.1)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
