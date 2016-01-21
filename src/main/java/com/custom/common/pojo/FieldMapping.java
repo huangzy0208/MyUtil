@@ -1,4 +1,4 @@
-package com.sdeport.common.pojo;
+package com.custom.common.pojo;
 
 /**
  * field映射关系

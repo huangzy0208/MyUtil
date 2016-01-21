@@ -1,4 +1,4 @@
-package com.sdeport.common.utils;
+package com.custom.common.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -41,8 +41,8 @@ public class EncodingDetect {
      * @return 文件的编码
      */
     public static String getJavaEncode(String filePath) {
-        com.sdeport.common.utils.BytesEncodingDetect s = new com.sdeport.common.utils.BytesEncodingDetect();
-        String fileCode = com.sdeport.common.utils.BytesEncodingDetect.javaname[s.detectEncoding(new File(filePath))];
+        com.custom.common.utils.BytesEncodingDetect s = new com.custom.common.utils.BytesEncodingDetect();
+        String fileCode = com.custom.common.utils.BytesEncodingDetect.javaname[s.detectEncoding(new File(filePath))];
         return fileCode;
     }
 
@@ -53,13 +53,13 @@ public class EncodingDetect {
      * @return 文件的编码
      */
     public static String getStreamEncode(InputStream is) {
-        com.sdeport.common.utils.BytesEncodingDetect s = new com.sdeport.common.utils.BytesEncodingDetect();
-        String fileCode = com.sdeport.common.utils.BytesEncodingDetect.javaname[s.detectEncoding(is)];
+        com.custom.common.utils.BytesEncodingDetect s = new com.custom.common.utils.BytesEncodingDetect();
+        String fileCode = com.custom.common.utils.BytesEncodingDetect.javaname[s.detectEncoding(is)];
         return fileCode;
     }
 }
 
-class BytesEncodingDetect extends com.sdeport.common.utils.Encoding {
+class BytesEncodingDetect extends com.custom.common.utils.Encoding {
     // Frequency tables to hold the GB, Big5, and EUC-TW character  
     // frequencies  
     int GBFreq[][];

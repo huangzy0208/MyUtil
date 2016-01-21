@@ -1,4 +1,4 @@
-package com.sdeport.common.utils;
+package com.custom.common.utils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

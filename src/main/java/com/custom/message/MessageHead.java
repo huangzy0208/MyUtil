@@ -1,7 +1,7 @@
-package com.sdeport.message;
+package com.custom.message;
 
 
-import com.sdeport.common.utils.ZzStringUtil;
+import com.custom.common.utils.ZzStringUtil;
 import org.apache.commons.lang3.StringUtils;
 
 public class MessageHead implements InterfaceHead {

@@ -1,12 +1,12 @@
-package com.sdeport.message;
+package com.custom.message;
 
 
-import com.sdeport.common.dao.CommonDao;
-import com.sdeport.common.utils.FreeMarkerUtil;
-import com.sdeport.common.utils.XmlUtils;
-import com.sdeport.common.utils.ZzStringUtil;
-import com.sdeport.template.TemplateMap;
-import com.sdeport.template.TemplateMapping;
+import com.custom.common.dao.CommonDao;
+import com.custom.common.utils.FreeMarkerUtil;
+import com.custom.common.utils.XmlUtils;
+import com.custom.common.utils.ZzStringUtil;
+import com.custom.template.TemplateMap;
+import com.custom.template.TemplateMapping;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

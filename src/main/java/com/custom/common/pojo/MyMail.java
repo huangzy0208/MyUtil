@@ -1,4 +1,4 @@
-package com.sdeport.common.pojo;
+package com.custom.common.pojo;
 
 import java.util.HashMap;
 import java.util.Map;

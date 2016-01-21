@@ -1,8 +1,8 @@
-package com.sdeport.message;
+package com.custom.message;
 
 
-import com.sdeport.common.utils.BeanMapUtill;
-import com.sdeport.common.utils.XmlMapUtil;
+import com.custom.common.utils.BeanMapUtill;
+import com.custom.common.utils.XmlMapUtil;
 import org.dom4j.DocumentException;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

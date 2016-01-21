@@ -1,4 +1,4 @@
-package com.sdeport.common.utils;
+package com.custom.common.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -45,7 +45,7 @@ public class MailUtils {
         message.setFrom(new InternetAddress(fromMail));//设置发件人的地址
         //群发时发送给一个虚拟用户，隐藏邮件人列表
         if (StringUtils.isNotEmpty(toMail) && toMail.contains(",")) {
-            InternetAddress toUser = new InternetAddress("users@sdeport.com");
+            InternetAddress toUser = new InternetAddress("users@custom.com");
             toUser.setPersonal("尊敬的山东电子口岸用户", "GBK");
             message.setRecipient(Message.RecipientType.TO, toUser);
             message.setRecipients(Message.RecipientType.BCC, toMail);

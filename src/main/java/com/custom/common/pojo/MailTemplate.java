@@ -1,4 +1,4 @@
-package com.sdeport.common.pojo;
+package com.custom.common.pojo;
 
 /**
  * 邮箱模板映射关系

@@ -1,7 +1,7 @@
-package com.sdeport.message;
+package com.custom.message;
 
 
-import com.sdeport.template.TemplateMap;
+import com.custom.template.TemplateMap;
 import freemarker.template.TemplateException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
-package com.sdeport.common.service;
+package com.custom.common.service;
 
-import com.sdeport.common.dao.CommonDao;
-import com.sdeport.common.pojo.BaseSavePojo;
-import com.sdeport.common.utils.CommonUtil;
+import com.custom.common.dao.CommonDao;
+import com.custom.common.pojo.BaseSavePojo;
+import com.custom.common.utils.CommonUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

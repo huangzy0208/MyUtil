@@ -1,4 +1,4 @@
-package com.sdeport.template;
+package com.custom.template;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

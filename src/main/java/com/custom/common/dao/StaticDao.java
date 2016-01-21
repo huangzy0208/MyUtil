@@ -1,4 +1,4 @@
-package com.sdeport.common.dao;
+package com.custom.common.dao;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.sdeport.template;
+package com.custom.template;
 
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.sdeport.vehicle.utils;
+package com.custom.vehicle.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -1,8 +1,8 @@
-package com.sdeport.mail;
+package com.custom.mail;
 
 
-import com.sdeport.common.utils.FreeMarkerUtil;
-import com.sdeport.template.TemplateMap;
+import com.custom.common.utils.FreeMarkerUtil;
+import com.custom.template.TemplateMap;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

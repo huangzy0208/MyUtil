@@ -1,4 +1,4 @@
-package com.sdeport.message;
+package com.custom.message;
 
 public class MessageBody<T> {
 

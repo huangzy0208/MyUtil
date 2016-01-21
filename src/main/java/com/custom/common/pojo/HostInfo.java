@@ -1,4 +1,4 @@
-package com.sdeport.common.pojo;
+package com.custom.common.pojo;
 
 /**
  * 主机信息

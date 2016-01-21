@@ -1,7 +1,7 @@
-package com.sdeport.common.Interecptor;
+package com.custom.common.Interecptor;
 
 
-import com.sdeport.common.utils.BeanMapUtill;
+import com.custom.common.utils.BeanMapUtill;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.*;

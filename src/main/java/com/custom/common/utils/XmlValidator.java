@@ -1,4 +1,4 @@
-package com.sdeport.common.utils;
+package com.custom.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

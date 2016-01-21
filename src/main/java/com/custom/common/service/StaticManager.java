@@ -1,9 +1,9 @@
-package com.sdeport.common.service;
+package com.custom.common.service;
 
-import com.sdeport.common.dao.StaticDao;
-import com.sdeport.mail.MailCreator;
-import com.sdeport.mail.MailSender;
-import com.sdeport.message.MsgCreator;
+import com.custom.common.dao.StaticDao;
+import com.custom.mail.MailCreator;
+import com.custom.mail.MailSender;
+import com.custom.message.MsgCreator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

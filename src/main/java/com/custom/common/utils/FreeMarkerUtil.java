@@ -1,6 +1,6 @@
-package com.sdeport.common.utils;
+package com.custom.common.utils;
 
-import com.sdeport.common.pojo.HostInfo;
+import com.custom.common.pojo.HostInfo;
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.cache.MultiTemplateLoader;
 import freemarker.cache.TemplateLoader;

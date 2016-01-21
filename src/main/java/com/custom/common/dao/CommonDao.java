@@ -1,6 +1,6 @@
-package com.sdeport.common.dao;
+package com.custom.common.dao;
 
-import com.sdeport.common.utils.SqlProvider;
+import com.custom.common.utils.SqlProvider;
 import org.apache.ibatis.annotations.*;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Repository;

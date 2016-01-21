@@ -1,7 +1,7 @@
-package com.sdeport.mail;
+package com.custom.mail;
 
 
-import com.sdeport.common.utils.MailUtils;
+import com.custom.common.utils.MailUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,8 +1,8 @@
-package com.sdeport.template;
+package com.custom.template;
 
 
-import com.sdeport.common.pojo.FieldMapping;
-import com.sdeport.common.service.CommonService;
+import com.custom.common.pojo.FieldMapping;
+import com.custom.common.service.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 

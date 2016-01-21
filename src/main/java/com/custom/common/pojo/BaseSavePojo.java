@@ -1,8 +1,8 @@
-package com.sdeport.common.pojo;
+package com.custom.common.pojo;
 
 
-import com.sdeport.common.utils.BeanMapUtill;
-import com.sdeport.common.utils.SqlType;
+import com.custom.common.utils.BeanMapUtill;
+import com.custom.common.utils.SqlType;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
